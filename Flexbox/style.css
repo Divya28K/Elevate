@@ -1,0 +1,61 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== NAVBAR STYLES ===== */
+.navbar {
+    display: flex;                 /* Enables Flexbox */
+    justify-content: space-between; /* Space between logo & menu */
+    align-items: center;            /* Vertically center items */
+    padding: 15px 30px;
+    background-color: #222;
+    color: white;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;   /* Makes list items horizontal */
+    gap: 20px;       /* Space between items */
+    list-style: none;
+}
+
+/* ===== CARD SECTION ===== */
+.card-container {
+    display: flex;        /* Enables Flexbox */
+    justify-content: center; /* Center cards */
+    gap: 20px;            /* Space between cards */
+    padding: 30px;
+    flex-wrap: wrap;      /* Wrap cards on small screens */
+}
+
+.card {
+    width: 220px;
+    height: 130px;
+    background-color: #4caf50;
+    color: white;
+    display: flex;        /* Flexbox inside card */
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items */
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Vertical menu */
+        align-items: center;
+    }
+}
